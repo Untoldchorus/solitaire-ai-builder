@@ -11,9 +11,9 @@ export default function App() {
     Outfit_700Bold,
   });
 
-  if (!fontsLoaded) {
+  /* if (!fontsLoaded) {
     return null;
-  }
+  } */
 
   return (
     <View style={styles.container}>
