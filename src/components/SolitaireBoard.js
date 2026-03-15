@@ -3,7 +3,6 @@ import { View, StyleSheet, ScrollView, TouchableOpacity, Text, SafeAreaView, Dim
 import { SolitaireGame } from '../logic/SolitaireLogic';
 import CardComponent, { CARD_WIDTH } from './CardComponent';
 import { getMoveExplanation } from '../logic/LMStudioClient';
-import { MotiView, AnimatePresence } from 'moti';
 import { Brain, Play, RotateCcw, Plus, Image as ImageIcon, Layers } from 'lucide-react-native';
 import CardPicker from './CardPicker';
 import DeckBuilder from './DeckBuilder';
@@ -148,14 +147,12 @@ const SolitaireBoard = () => {
       </View>
 
       {/* Tutor Panel */}
-      <MotiView 
-        animate={{ opacity: 1, scale: 1 }}
-        from={{ opacity: 0, scale: 0.9 }}
+      <View 
         style={styles.tutorPanel}
       >
         <Brain color="#d4af37" size={20} />
         <Text style={styles.tutorText}>{tutorText}</Text>
-      </MotiView>
+      </View>
 
       {/* Board Layout */}
       <ScrollView contentContainerStyle={styles.board} bounces={false}>
@@ -282,7 +279,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     flex: 1,
     lineHeight: 20,
-    fontFamily: 'Outfit_400Regular',
   },
   board: {
     padding: 10,

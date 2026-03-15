@@ -22,10 +22,7 @@ const CardComponent = ({ card, index = 0, isStack = false, onPress }) => {
   if (!card) return <View style={[styles.card, styles.empty]} />;
 
   return (
-    <MotiView
-      from={{ opacity: 0, scale: 0.8, translateY: 20 }}
-      animate={{ opacity: 1, scale: 1, translateY: 0 }}
-      transition={{ type: 'spring', delay: index * 50 }}
+    <View
       style={[
         styles.card,
         card.isFaceUp ? styles.faceUp : styles.faceDown,
@@ -47,7 +44,7 @@ const CardComponent = ({ card, index = 0, isStack = false, onPress }) => {
       ) : (
         <View style={styles.pattern} />
       )}
-    </MotiView>
+    </View>
   );
 };
 
