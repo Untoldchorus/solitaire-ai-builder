@@ -279,6 +279,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     flex: 1,
     lineHeight: 20,
+    fontFamily: 'Outfit_400Regular',
   },
   board: {
     padding: 10,

@@ -1,19 +1,23 @@
-// Solitaire AI Builder - Final Stable Build
-console.log("APP_INIT: Script loaded and executing...");
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import SolitaireBoard from './src/components/SolitaireBoard';
+import { useFonts, Outfit_400Regular, Outfit_700Bold } from '@expo-google-fonts/outfit';
 
 export default function App() {
-  console.log("APP_RENDER: App component is rendering...");
+  let [fontsLoaded] = useFonts({
+    Outfit_400Regular,
+    Outfit_700Bold,
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
       <StatusBar style="light" />
       <SolitaireBoard />
-      <Text style={{ position: 'absolute', top: 50, left: 10, color: 'white', backgroundColor: 'red', padding: 10, zIndex: 9999 }}>
-        Debug: App Component Active
-      </Text>
     </View>
   );
 }
