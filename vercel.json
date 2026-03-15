@@ -1,14 +1,4 @@
 {
-  "github": {
-    "silent": true
-  },
-  "hosting": {
-    "vercel": {
-      "project": "solitaire-ai-builder"
-    }
-  },
-  "build": {
-    "command": "npx expo export",
-    "outputDirectory": "dist"
-  }
+  "cleanUrls": true,
+  "framework": "expo"
 }
