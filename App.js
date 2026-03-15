@@ -1,5 +1,3 @@
-// Solitaire AI Builder - Final Stable Build
-console.log("APP_INIT: Script loaded and executing...");
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';

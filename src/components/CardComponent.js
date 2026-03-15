@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, StyleSheet, Dimensions } from 'react-native';
-import { MotiView } from 'moti';
 import { Heart, Diamond, Clubs, Spade } from 'lucide-react-native';
 
 const { width } = Dimensions.get('window');
